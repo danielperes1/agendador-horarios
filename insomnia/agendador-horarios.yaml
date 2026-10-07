@@ -1,0 +1,144 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Agendador de Horários API
+meta:
+  id: wrk_bf6e75d4d9344b559070dfa361c491d6
+  created: 1791351446870
+  modified: 1791351446870
+  description: ""
+collection:
+  - url: http://localhost:8080/agendamentos
+    name: Criar (POST) agendamento
+    meta:
+      id: req_e8ed8396b93848e490a6481ddd079b10
+      created: 1791351447252
+      modified: 1791352318531
+      isPrivate: false
+      description: ""
+      sortKey: -1791351447252
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"servico":"Corte de cabelo",
+         "profissional":"Carlos",
+         "dataHoraAgendamento":"2026-10-08T14:00:00",
+         "cliente":"Joao",
+         "telefoneCliente":"27999999999"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/agendamentos
+    name: Ler/Retornar agendamento (GET)
+    meta:
+      id: req_6d7bf9de79cb41498fa20757245b3083
+      created: 1791351774172
+      modified: 1791352344569
+      isPrivate: false
+      description: ""
+      sortKey: -1791351774172
+    method: GET
+    parameters:
+      - name: data
+        value: 2026-10-08
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/agendamentos
+    name: Atualizar agendamento (PUT)
+    meta:
+      id: req_61d6934ba3ec4f4681e1c2ce04b16fef
+      created: 1791351998672
+      modified: 1791352356978
+      isPrivate: false
+      description: ""
+      sortKey: -1791351998672
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"servico": "Barba",
+        	"profissional": "Carlos",
+        	"dataHoraAgendamento": "2026-10-08T15:00:00",
+        	"cliente": "Joao",
+        	"telefoneCliente": "27999999999"
+        	
+        }
+    parameters:
+      - name: cliente
+        value: Joao
+        description: ""
+        disabled: false
+      - name: dataHoraAgendamento
+        value: 2026-10-08T14:00:00
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/agendamentos
+    name: Deletar agendamento (DELETE)
+    meta:
+      id: req_c70cd91c39094ba09786edb8b45bfd61
+      created: 1791352194870
+      modified: 1791352366837
+      isPrivate: false
+      description: ""
+      sortKey: -1791352194870
+    method: DELETE
+    parameters:
+      - name: cliente
+        value: Joao
+        description: ""
+        disabled: false
+      - name: dataHoraAgendamento
+        value: 2026-10-08T15:00:00
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a925a8d2894d4f79e800f4cd43dedc2f6ee7e3df
+    created: 1791351446872
+    modified: 1791351446872
+environments:
+  name: Base Environment
+  meta:
+    id: env_a925a8d2894d4f79e800f4cd43dedc2f6ee7e3df
+    created: 1791351446871
+    modified: 1791351446871
+    isPrivate: false
