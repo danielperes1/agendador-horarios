@@ -146,11 +146,3 @@ Com a aplicação rodando, o console do banco fica disponível em `http://localh
 | JDBC URL | `jdbc:h2:mem:agendamentos-db` |
 | User Name | `sa` |
 | Password | *(vazio)* |
-
-## Próximos passos
-
-- [ ] Retornar status HTTP específicos nos erros (`409 Conflict` para horário ocupado e `404 Not Found` para agendamento inexistente), com a mensagem no corpo da resposta
-- [ ] Validar os dados de entrada com Bean Validation
-- [ ] Criar testes unitários e de integração
-- [ ] Documentar a API com Swagger / OpenAPI
-- [ ] Usar um banco de dados persistente, como o PostgreSQL
